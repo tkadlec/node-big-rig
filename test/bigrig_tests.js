@@ -223,7 +223,23 @@ describe('Big Rig', function () {
 
       });
   });
+  it ('returns the correct image decode time', function (done) {
 
+    fs.readFile('./test/data/load.json', 'utf8',
+      function (err, data) {
+
+        if (err) {
+          throw err;
+        }
+
+        var jsonData = bigrig.analyze(data);
+        expect(
+          jsonData[0].imageDecode
+        ).to.be.within(12, 13);
+        done();
+
+      });
+  });
   it ('returns the correct JS breakdown', function (done) {
 
     fs.readFile('./test/data/load.json', 'utf8',
