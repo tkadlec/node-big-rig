@@ -10,9 +10,9 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "cli-color": "^1.1.0",
+    "cli-color": "^2.0.1",
     "mkdirp": "^0.5.1",
-    "yargs": "^3.29.0"
+    "yargs": "^13.2.4"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.3",
